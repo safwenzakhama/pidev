@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Categoryexercice{% endblock %}
+
+{% block body %}
+    <h1>Edit Categoryexercice</h1>
+
+    {{ include('categoryexercice/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('categoryexercice_index') }}">back to list</a>
+
+    {{ include('categoryexercice/_delete_form.html.twig') }}
+{% endblock %}

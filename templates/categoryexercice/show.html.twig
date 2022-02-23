@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Categoryexercice{% endblock %}
+
+{% block body %}
+    <h1>Categoryexercice</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Name</th>
+                <td>{{ categoryexercice.name }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ categoryexercice.description }}</td>
+            </tr>
+            <tr>
+                <th>Photo</th>
+                <td>{{ asset( 'uploads/')}}{{ categoryexercice.photo }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('categoryexercice_index') }}">back to list</a>
+
+    <a href="{{ path('categoryexercice_edit', {'id': categoryexercice.id}) }}">edit</a>
+
+    {{ include('categoryexercice/_delete_form.html.twig') }}
+{% endblock %}

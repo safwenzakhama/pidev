@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Categoryexercice{% endblock %}
+
+{% block body %}
+    <h1>Create new Categoryexercice</h1>
+
+    {{ include('categoryexercice/_form.html.twig') }}
+
+    <a href="{{ path('categoryexercice_index') }}">back to list</a>
+{% endblock %}
